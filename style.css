@@ -1,0 +1,236 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+body{
+    background-image:url("https://images.unsplash.com/photo-1537210249814-b9a10a161ae4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    font-family: 'Gotu', sans-serif; 
+}
+.weathertemplate{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   margin: 0 auto;
+   padding: 3rem 1rem;
+   
+}
+#container{
+    height: auto;
+    background-image: linear-gradient(40deg,#1254aa,#6834bb);
+    opacity: 0.9;
+    padding: 2rem 1rem ;
+    flex: 1;
+    margin-left: 4rem;
+    display: none;
+}
+.title{
+    color:white;
+    flex: 1 ;
+    margin: auto;
+   
+}
+#template{
+    display: flex;
+    flex-direction: row;
+    /* font-size: 2vw; */
+   
+}
+#template::before, #template::after{
+    content: "";
+    flex: 1 1;
+    border-bottom: 2px solid white;
+    margin: auto;
+}
+#template::before{
+    margin-right: 10px;
+}
+#template::after{
+    margin-left:10px;
+}
+.countryDetails{
+    background: #0000003d;
+    height: fit-content;
+    width: auto;
+    color: white;
+    border-radius: 1vh;
+    padding: 0.5rem 0.8rem;
+    text-align: center;
+}
+.imgblock{
+     display:flex; 
+     justify-content: center;  
+}
+.imgblock img{
+    margin-left: -1rem;
+}
+.imgblock .temp{
+    margin:auto 0;
+    font-size: 2rem;
+}
+.iconDesc{
+    margin-top: -.5rem;
+    margin-bottom: 1rem;
+}  
+
+.weatherDetails{
+    margin-top: 1rem;
+    background: #0000003d;
+    color: white;
+    border-radius: 1vh;
+    padding:0.7rem 0; 
+}
+.sidevalue{
+    display: flex;
+    margin: 1rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.295);
+}
+
+.sidevalue p{
+    flex: 1;
+}
+.show{
+  display: flex;
+}
+.hide{
+   display: none;
+}
+.changeBtn{
+    text-align: center;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.589);
+    border-radius: .4rem;
+    padding: 0.5rem 0;
+    margin-top: 1rem;
+}
+.changeBtn:hover{
+    background: rgba(255, 255, 255, 0.336);
+    cursor: pointer;
+}
+#backdrop{
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.459);
+    display: none;
+}
+.changeLocation{
+    background: white;
+    padding: 1rem;
+    width: 50%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.changeLocation span{
+    color:#6834bb ;
+}
+.saveBtn,.cancelBtn{
+    margin-top: 1rem;
+    background-color: #6834bb;
+    color: white;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid #530fc0;
+    border-radius: .3rem;
+    font-size: medium;
+    margin-left: 20px;
+}
+input[type=text]{
+    border:1px solid #6834bb;
+    padding: 0.5rem 0;
+    width: 100%;
+    border-radius: .3rem;
+    margin-bottom: 1rem;
+    font-size: medium;
+    font-family: inherit;
+}
+.bttn{
+    display: flex;
+    justify-content: flex-end;
+}
+.dot-container{
+    color: whitesmoke;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100vh;
+    text-align: center;
+    margin: 0 auto;
+
+}
+.dot{
+    height: 20px;
+    width: 20px;
+    background-color: whitesmoke;
+    border-radius: 50%; 
+    display: inline-block; 
+    margin-right: 0.5rem;
+    
+    transform: translateY(0);
+    box-shadow: 2px 2px 5px white, 2px 2px 5px blueviolet;
+    animation: up-down 1000ms ease-in-out infinite;
+}
+.dot:nth-child(1){
+    animation-delay: 500ms;
+}
+.dot:nth-child(2){
+    animation-delay: 700ms;
+}
+.dot:nth-child(3){
+    animation-delay: 900ms;
+}
+.dot:nth-child(4){
+    animation-delay: 1100ms;
+}
+.dot:nth-child(5){
+    animation-delay: 1300ms;
+}
+@keyframes up-down {
+    50%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+
+@media (max-width:1024px){
+
+    .weathertemplate{
+        flex-direction: column;
+    }
+    #container{
+       margin-left: 0;
+       margin-top: 3rem;
+    }
+    .title{
+        margin:0;
+    }
+    .bttn{
+        flex-direction: column;
+    }
+    .Btn{
+        margin-left: 0;
+    }
+
+}
+
+[hidden]{
+    display: none;
+}
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="backdrop">
+    <div class="changeLocation">
+        <label for="city">City</label><br>
+        <input type="text" name="city" id="city"><br>
+        <label for="country-name">Country <span>(Optional)</span></label><br>
+        <input type="text" name="country-name" id="country-name"><br>
+        <div class="bttn">
+            <button type="button" class="saveBtn">Save Changes</button>
+        <button type="button" class="cancelBtn">Cancel</button>
+        </div>   
+    </div>
+</div>
+    <div class="weathertemplate">
+    <div class="title"><p id="template">WEATHER TEMPLATE</p></div>
+    <div id="container">
+        <div class="countryDetails">
+            <p class="cityName"></p>
+            <div class="imgblock">
+                <img class="iconImg">
+                <p class="temp"></p>
+            </div>
+            <p class="iconDesc"></p>
+            <p class="min-temp"></p>
+            <p class="max-temp"></p>
+        </div>
+    
+        <div class="weatherDetails"> 
+            <div class="sidevalue">
+                <p>SUNRISE</p>
+                <span class="sunrise"></span>
+            </div>
+            <div class="sidevalue">
+                <p>SUNSET</p>
+                <span class="sunset"></span>
+            </div>
+            <div class="sidevalue">
+                <p>WIND SPEED</p>
+                <span class="windspeed"></span>
+            </div>
+            <div class="sidevalue">
+                <p>WIND DIRECTION</p>
+                <span class="winddirection"></span>
+            </div>
+            <div class="sidevalue">
+                <p>FEELSLIKE</p>
+                <span class="feelslike"></span>
+            </div>
+            <div class="sidevalue">
+                <p>HUMIDITY</p>
+                <span class="humidity"></span>
+            </div>
+            <div class="sidevalue">
+                <p>PRESSURE</p>
+                <span class="pressure"></span>
+            </div>
+            <div class="sidevalue last">
+                <p>VISIBILITY</p>
+                <span class="visibility"></span>
+            </div>         
+        </div>
+        <div class="changeBtn" type="button">Change Location</div>
+    </div>
+</div>
+
+<div class="dot-container">
+    <div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+   </div>
+    <h3>Loading</h3>
+</div>
+    <script src="storage.js"></script>
+    <script src="ui.js"></script>
+    <script src="weather.js"></script>
+    <script src="timezonedata.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
