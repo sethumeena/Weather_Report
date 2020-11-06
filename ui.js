@@ -17,7 +17,12 @@ this.visibility = document.querySelector(".visibility");
 this.sideValue = document.querySelector('.last');
 }
 
+
   showData(receivedData){ 
+
+    if(receivedData){
+
+    
     //cityname
     this.cityName.innerHTML = `${receivedData.name}, ${receivedData.sys.country}`;
     //img icon and its desc
@@ -107,7 +112,7 @@ this.sideValue = document.querySelector('.last');
     //windDirection
     this.winddirection.innerHTML = `${this.deg}\xB0 ${this.degToCard(this.deg)}`;  
   }
-
+  }
   
 }
 
