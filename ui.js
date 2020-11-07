@@ -42,13 +42,13 @@ this.sideValue = document.querySelector('.last');
       //sunrise
       let unixRiseTimestamp = receivedData.sys.sunrise;
       const riseDate = new Date(unixRiseTimestamp * 1000);
-      const riseTimeDate = new Date(riseDate).toLocaleString("en-US", {timeZone: data.zoneName});
+      const riseTimeDate = riseDate.toLocaleString("en-US", {timeZone: data.zoneName});
       const riseTime = riseTimeDate.split(',')[1].split(':');
       this.sunrise.innerHTML = `${riseTime[0]}:${riseTime[1]} ${riseTime[2].split(' ')[1]}`;
       // sunset
       let unixSetTimestamp = receivedData.sys.sunset;
       const setDate = new Date(unixSetTimestamp * 1000);
-      const setTimeDate = new Date(setDate).toLocaleString("en-US", {timeZone: data.zoneName});
+      const setTimeDate = setDate.toLocaleString("en-US", {timeZone: data.zoneName});
       const setTime = setTimeDate.split(',')[1].split(':');
       this.sunset.innerHTML = `${setTime[0]}:${setTime[1]} ${setTime[2].split(' ')[1]}`;
     })
