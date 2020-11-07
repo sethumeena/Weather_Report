@@ -40,7 +40,6 @@ body{
       -ms-flex: 1;
         flex: 1;
     margin-left: 4rem;
-    display: none;
 }
 .title{
     color:white;
@@ -297,7 +296,5 @@ input[type=text]{
 
 }
 
-[hidden]{
-    display: none;
-}
+
 

@@ -1,4 +1,5 @@
 class UI{
+  
 constructor(){
 this.cityName = document.querySelector(".cityName");
 this.iconImg = document.querySelector(".iconImg");
@@ -16,13 +17,8 @@ this.pressure= document.querySelector(".pressure");
 this.visibility = document.querySelector(".visibility");
 this.sideValue = document.querySelector('.last');
 }
-
-
   showData(receivedData){ 
-
     if(receivedData){
-
-    
     //cityname
     this.cityName.innerHTML = `${receivedData.name}, ${receivedData.sys.country}`;
     //img icon and its desc
@@ -113,7 +109,6 @@ this.sideValue = document.querySelector('.last');
     this.winddirection.innerHTML = `${this.deg}\xB0 ${this.degToCard(this.deg)}`;  
   }
   }
-  
 }
 
 
