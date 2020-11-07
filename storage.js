@@ -6,13 +6,13 @@ class Storage{
         this.hardcodeCountry = "Canada"; 
     }
     getLocationData(){   
-        if(localStorage.getItem('city') === null){
+        if((localStorage.getItem('city') === null) || (localStorage.getItem('city') === "")){
            this.city = this.hardcodeCity;   
         }
         else{
            this.city = localStorage.getItem('city');
         } 
-        if(localStorage.getItem('country') === null){
+        if((localStorage.getItem('country') === null) || (localStorage.getItem('country') === "")){
             this.country= this.hardcodeCountry;
         }else{
             this.country = localStorage.getItem('country');
