@@ -290,7 +290,7 @@ input[type=text]{
               -ms-flex-direction: column;                 
                  flex-direction: column;
     }
-    .Btn{
+    .saveBtn,.cancelBtn{
         margin-left: 0;
     }
 
