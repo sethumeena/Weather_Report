@@ -3,31 +3,28 @@ class Storage{
         this.city;
         this.country;
         this.hardcodeCity ="Ottawa";
-        this.hardcodeCountry = "Canada";
+        this.hardcodeCountry = "Canada"; 
     }
-
-    getLocationData(){
-        
-        if(localStorage.getItem('city') === ""){
-           this.city = this.hardcodeCity;
-           
-       }else{
+    getLocationData(){   
+        if(localStorage.getItem('city') === null){
+           this.city = this.hardcodeCity;   
+        }
+        else{
            this.city = localStorage.getItem('city');
         } 
-        if(localStorage.getItem('country') === ""){
+        if(localStorage.getItem('country') === null){
             this.country= this.hardcodeCountry;
         }else{
             this.country = localStorage.getItem('country');
          } 
-
-         return {
+        return {
             city:this.city,
             country:this.country
-         }
-         
+        }  
     }
     setLocationData(city,country){
-       localStorage.setItem('city',city);
-       localStorage.setItem('country',country);
-    }
+        localStorage.setItem('city',city);
+        localStorage.setItem('country',country);
+     }
+    
 }
